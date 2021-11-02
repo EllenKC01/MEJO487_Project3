@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project3</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./DataTables/datatables.min.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/c3.min.css">
 </head>
@@ -13,13 +14,19 @@
     <div class="article">
         <div class="title">
             <h1 class="head">Coronavirus Mental Health</h1>
-            <h2>Trends of mental health needs in 2020 and 20201</h2>
+            <h2 class="subtitle">Trends of mental health needs in 2020 and 20201</h2>
+            <h2 class="data-head">Data as of October 2021</h2>
         </div>
         <div class="body">
-            <p>The first year of the COVID-19 pandemic meant an extended quarantine, a situation the majority of the current population of the United States has never had to deal with. This new way of life brought many challenges, some seen and others more subtle. One of these more abstract challenged was mental health needs. Many were faced with deteriorating mental health either for the first time or more severely than normal due to the isolation and helplessness prevalent during 2020. Some turned to medicines or counseling, but others were unable to access such resources.</p>
-            <p>From August of 2020 through mid-October of 2021, the U.S. Census Bureau received survey data from families across the country as part of the Household Pulse Survey. These internet surveys were meant to track the impacts of the pandemic on each household, and they included data such as employment status, spending, food security, housing, educational disruptions, and mental health status. The data was broken down by responders’ age, race, gender, and sexuality, as well as other dividing factors. Survey answers were submitted after every period of four weeks, allowing collectors to track the data over time as the status of the pandemic changed along with people’s views of the virus.</p>
+            <div class="intro">
+                <p>The first year of the COVID-19 pandemic meant an extended quarantine, a situation the majority of the current population of the United States has never had to deal with. This new way of life brought many challenges, some seen and others more subtle. One of these more abstract challenged was mental health needs. Many were faced with deteriorating mental health either for the first time or more severely than normal due to the isolation and helplessness prevalent during 2020. Some turned to medicines or counseling, but others were unable to access such resources.</p>
+                <p>From August of 2020 through mid-October of 2021, the U.S. Census Bureau received survey data from families across the country as part of the Household Pulse Survey. These internet surveys were meant to track the impacts of the pandemic on each household, and they included data such as employment status, spending, food security, housing, educational disruptions, and mental health status. The data was broken down by responders’ age, race, gender, and sexuality, as well as other dividing factors. Survey answers were submitted after every period of four weeks, allowing collectors to track the data over time as the status of the pandemic changed along with people’s views of the virus.</p>
+            </div>
+            <br>
             <div>
-                <p>Below, find graphs measuring the percentage of needed versus recieved counseling or therapy during the three phases of September in 2020 and 2021. In this case, needed counseling applies to help that was needed but not recieved.</p>
+                <div class="description">
+                    <p>Below, find graphs measuring the percentage of needed versus recieved counseling or therapy during the three phases of September in 2020 and 2021. In this case, needed counseling applies to help that was needed but not recieved.</p>
+                </div>
                 <div class="row bar-graphs">
                     <div class="col-md-6 bar">
                         <h2 class="graph-title">Sep 2020</h2>
@@ -36,14 +43,48 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <div class="description">
+                    <p>The graphs below measure the percentage of needed versus recieved counseling or therapy during the first phase of September in 2020 (top) and 2021 (bottom). The data is divided by age groups along the x-axis</p>
+                </div>
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-7 graph3">
                         <div class="line" id="chart3"></div>
+                        <div class="line" id="chart4"></div>
                     </div>
-                    <div class="col-md-3 needs-over-time">
-                        <h2 class="sub-head">Needs over Time</h2>
-                        <p></p>
+                    <div class="col-md-4 needs-by-age">
+                        <div class="descrip2">
+                            <h2 class="sub-head needs">Needs by Age</h2>
+                            <p>When broken down by age, the data collected for the Household Pulse Survey makes it clear that young people have struggled the most with issues involving mental health during the pandemic. When compared over the two years, the percentages were generally higher in 2021 as shown in the above graphs. One differentiating factor with this data is the fact that percentages for those who were able to receive help are higher than percentages for those who didn’t among the older population. In 2020, this group included those over 50, while in 2021 this included those over 60.</p>
+                        </div>
                     </div>
+                </div>
+                <div class="closing">
+                    <h2 class="sub-head">Takeaways</h2>
+                    <p>Between the data shown above, it becomes clear that mental health concerns have only become more important as the pandemic has continued, especially for young people. Though many may have assumed mental health needs to be worse during the full quarantine in 2020, this data supports the opposite claim. Beyond this, when the data is broken down by age it is clear that resources for mental health needs have become harder to access in the last year, even as need has risen. Whether this is due to an unwillingness to accept help or simply an inability to find help remains to be seen, but it is clear mental health concerns should remain in the forefront of any pandemic action plans, now and in the future.</p>
+                </div>
+                <br>
+                <div class="description">
+                    <p>The table below categorizes data regarding the percentages of resources needed and resources received by state. The data is taken from the first phase of September in 2021. Search by indicator or state name to see specific data for each.</p>
+                </div>
+                <br>
+                <div class="container">
+                    <table id="myTable" class="hover table table-bordered table-responsive" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Indicator</th>
+                                <th>Group</th>
+                                <th>State</th>
+                                <th>Subgroup</th>
+                                <th>Phase</th>
+                                <th>Time Period</th>
+                                <th>Time Period Label</th>
+                                <th>Time Period Start Date</th>
+                                <th>Time Period End Date</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
             </div>
         </div>
@@ -62,6 +103,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="./scripts/c3.min.js"></script>
+    <script src="./DataTables/datatables.min.js"></script>
     <script src="./scripts/main.js"></script>
     <script src="./data/data.json"></script>
 </body>
